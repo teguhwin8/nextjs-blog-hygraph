@@ -68,3 +68,22 @@ a {
 * {
 	box-sizing: border-box;
 }
+
+article {
+	* {
+		@apply text-lg;
+		line-height: 1.5;
+		p {
+			@apply mb-6;
+		}
+		h3 {
+			@apply font-medium text-2xl my-4;
+		}
+		ul {
+			@apply list-disc pl-5;
+			* {
+				@apply my-4 font-normal;
+			}
+		}
+	}
+}

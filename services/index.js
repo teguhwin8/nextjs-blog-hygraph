@@ -91,3 +91,49 @@ export const getCategories = async () => {
 
 	return result;
 };
+
+export const getAllSlug = async () => {
+	const query = gql`
+		query MyQuery {
+			posts {
+				slug
+			}
+		}
+	`;
+
+	const result = await request(graphqlAPI, query);
+
+	return result;
+};
+
+export const getPostDetails = async (slug) => {
+	const query = gql`
+		query MyQuery($slug: String!) {
+			post(where: { slug: $slug }) {
+				title
+				id
+				publishedAt
+				slug
+				excerpt
+				author {
+					bio
+					name
+					id
+					photo {
+						url
+					}
+				}
+				content {
+					html
+				}
+				featuredImage {
+					url
+				}
+			}
+		}
+	`;
+
+	const result = await request(graphqlAPI, query, { slug });
+
+	return result;
+};

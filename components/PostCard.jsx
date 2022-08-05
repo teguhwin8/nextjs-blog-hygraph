@@ -18,9 +18,13 @@ const PostCard = ({ post }) => {
 					/>
 				</div>
 				<div className="my-5">
-					<h1 className="text-center text-xl md:text-2xl transition duration-500 hover:text-pink-700 cursor-pointer font-medium">
-						{post.title}
-					</h1>
+					<Link href={`/posts/${post.slug}`}>
+						<a>
+							<h1 className="text-center text-xl md:text-2xl transition duration-500 hover:text-pink-700 cursor-pointer font-medium">
+								{post.title}
+							</h1>
+						</a>
+					</Link>
 				</div>
 				<div className="my-5">
 					<div className="flex items-center justify-center">
@@ -31,14 +35,18 @@ const PostCard = ({ post }) => {
 							className="rounded-full"
 							alt={post.author.name}
 						/>
-						<div className="ml-2 text-gray-700 text-sm">{post.author.name}</div>
+						<div className="ml-2 text-gray-700 text-sm">
+							{post.author.name}
+						</div>
 						<div className="ml-1 text-gray-700 text-sm">
 							{moment(post.publishedAt).format("DD MMMM YYYY")}
 						</div>
 					</div>
 				</div>
 				<div className="my-5">
-					<p className="text-center text-gray-700 line-clamp-3">{post.excerpt}</p>
+					<p className="text-center text-gray-700 line-clamp-3">
+						{post.excerpt}
+					</p>
 				</div>
 				<div className="my-5 text-center">
 					<Link href={`/posts/${post.slug}`}>
