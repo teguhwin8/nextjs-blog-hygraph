@@ -8,7 +8,7 @@ import Head from "next/head";
 const PostCard = ({ post }) => {
 	return (
 		<>
-			<div className="bg-white rounded-lg mb-8 p-5">
+			<div className="bg-white rounded-lg mb-8 p-4 md:p-5">
 				<div className="aspect-w-16 aspect-h-9 rounded-lg">
 					<Image
 						src={post.featuredImage.url}
@@ -33,12 +33,19 @@ const PostCard = ({ post }) => {
 						/>
 						<div className="ml-2 text-gray-700 text-sm">{post.author.name}</div>
 						<div className="ml-1 text-gray-700 text-sm">
-							{moment(post.createdAt).format("DD MMMM YYYY")}
+							{moment(post.publishedAt).format("DD MMMM YYYY")}
 						</div>
 					</div>
 				</div>
 				<div className="my-5">
-					<p className="text-center text-gray-700">{post.excerpt}</p>
+					<p className="text-center text-gray-700 line-clamp-3">{post.excerpt}</p>
+				</div>
+				<div className="my-5 text-center">
+					<Link href={`/posts/${post.slug}`}>
+						<a className="px-6 py-3 bg-pink-700 text-white transition duration-300 transform hover:-translate-y-1 inline-block relative rounded-full">
+							Baca Selengkapnya
+						</a>
+					</Link>
 				</div>
 			</div>
 		</>

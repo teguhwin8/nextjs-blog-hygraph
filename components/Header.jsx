@@ -14,11 +14,11 @@ const categories = [
 
 const Header = () => {
 	return (
-		<div className="container mx-auto px-10 mb-8">
-			<div className="w-full inline-block py-8">
+		<div className="container mx-auto px-4 md:px-10 mb-4 md:mb-8">
+			<div className="w-full inline-block py-3 pt-6 md:py-8">
 				<div className="md:float-left block">
 					<Link href="/">
-						<a className="cursor-pointer font-bold text-4xl text-white">
+						<a className="cursor-pointer font-bold text-2xl md:text-4xl text-white">
 							Halo Blog
 						</a>
 					</Link>
