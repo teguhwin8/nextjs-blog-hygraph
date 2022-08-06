@@ -1,11 +1,14 @@
 import moment from "moment";
 import Image from "next/image";
 import React from "react";
+import { FcCalendar } from "react-icons/fc";
 
 export default function PostDetail({ post }) {
+	const { categories } = post;
+
 	return (
 		<>
-			<div className="bg-white rounded-lg mb-8 p-4 md:p-5">
+			<div className="bg-white rounded-lg mb-8 p-6 md:p-8">
 				<div className="aspect-w-16 aspect-h-9 rounded-lg">
 					<Image
 						src={post.featuredImage.url}
@@ -33,12 +36,13 @@ export default function PostDetail({ post }) {
 								{post.author.name}
 							</div>
 						</div>
-						<div className="ml-1 text-gray-700 text-sm">
+						<div className="ml-1 text-gray-700 text-sm flex items-center gap-2">
+							<FcCalendar className="h-6 w-6" />
 							{moment(post.publishedAt).format("DD MMMM YYYY")}
 						</div>
 					</div>
 				</div>
-				<article className="my-5">
+				<article className="my-5 pt-8">
 					<div dangerouslySetInnerHTML={{ __html: post.content.html }} />
 				</article>
 			</div>

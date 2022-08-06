@@ -130,9 +130,64 @@ export const getPostDetails = async (slug) => {
 				featuredImage {
 					url
 				}
+				categories {
+					id
+					name
+					slug
+				}
 				keywords
 				createdAt
 				updatedAt
+			}
+		}
+	`;
+
+	const result = await request(graphqlAPI, query, { slug });
+
+	return result;
+};
+
+export const getPostCategories = async (slug) => {
+	const query = gql`
+		query MyQuery($slug: String!) {
+			category(where: { slug: $slug }) {
+				posts {
+					author {
+						name
+						bio
+						id
+						photo {
+							url
+						}
+					}
+					slug
+					title
+					excerpt
+					featuredImage {
+						url
+					}
+					categories {
+						name
+						slug
+					}
+					publishedAt
+				}
+			}
+		}
+	`;
+
+	const result = await request(graphqlAPI, query, { slug });
+
+	return result;
+};
+
+export const getCategoryDetails = async (slug) => {
+	const query = gql`
+		query MyQuery($slug: String!) {
+			category(where: { slug: $slug }) {
+				id
+				name
+				slug
 			}
 		}
 	`;
