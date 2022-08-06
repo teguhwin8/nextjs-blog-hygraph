@@ -125,10 +125,14 @@ export const getPostDetails = async (slug) => {
 				}
 				content {
 					html
+					text
 				}
 				featuredImage {
 					url
 				}
+				keywords
+				createdAt
+				updatedAt
 			}
 		}
 	`;

@@ -38,7 +38,7 @@ const PostCard = ({ post }) => {
 						<div className="ml-2 text-gray-700 text-sm">
 							{post.author.name}
 						</div>
-						<div className="ml-1 text-gray-700 text-sm">
+						<div className="ml-4 text-gray-700 text-sm">
 							{moment(post.publishedAt).format("DD MMMM YYYY")}
 						</div>
 					</div>

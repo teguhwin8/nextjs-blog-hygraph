@@ -79,6 +79,12 @@ article {
 		h3 {
 			@apply font-medium text-2xl my-4;
 		}
+		h2 {
+			@apply font-medium text-3xl my-4;
+		}
+		h1 {
+			@apply font-medium text-4xl my-4;
+		}
 		ul {
 			@apply list-disc pl-5;
 			* {
