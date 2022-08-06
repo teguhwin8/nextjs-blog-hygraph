@@ -1,21 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import Link from "next/link";
-
-const categories = [
-	{
-		name: "React",
-		slug: "react",
-	},
-	{
-		name: "Web Development",
-		slug: "web-development",
-	},
-];
+import MenuItem from "./MenuItem";
+import BurgerMenu from "./BurgerMenu";
 
 const Header = () => {
 	return (
-		<div className="container mx-auto px-4 md:px-10 mb-4 md:mb-8">
-			<div className="w-full inline-block py-3 pt-6 md:py-8">
+		<div className="container mx-auto px-4 md:px-10 mb-4 md:mb-8 sticky top-0 z-20 bg-black">
+			<div className="w-full flex items-center justify-between py-4 md:py-8">
 				<div className="md:float-left block">
 					<Link href="/">
 						<a className="cursor-pointer font-bold text-2xl md:text-4xl text-white">
@@ -23,14 +14,11 @@ const Header = () => {
 						</a>
 					</Link>
 				</div>
-				<div className="hidden md:float-left md:contents">
-					{categories.map((category, index) => (
-						<Link key={index} href={`/categories/${category.slug}`}>
-							<a className="md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer">
-								{category.name}
-							</a>
-						</Link>
-					))}
+				<div className="hidden md:flex md:gap-10 text-white">
+					<MenuItem />
+				</div>
+				<div className="flex md:hidden">
+					<BurgerMenu />
 				</div>
 			</div>
 		</div>

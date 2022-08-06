@@ -9,7 +9,7 @@ import {
 
 export default function PostCategory(props) {
 	const { posts, category } = props;
-	console.log(category);
+
 	return (
 		<>
 			<Head>
@@ -30,9 +30,23 @@ export default function PostCategory(props) {
 								</Link>
 							</div>
 						</div>
-						{posts.map((post, index) => (
-							<PostCard key={index} post={post} />
-						))}
+						{posts.length > 0 ? (
+							posts.map((post, index) => (
+								<PostCard key={index} post={post} />
+							))
+						) : (
+							<div className="bg-white text-center rounded-lg mb-8 px-6 md:px-8 py-6">
+								<h2 className="text-2xl font-medium mb-8">
+									Maaf, artikel untuk kategori {category.name}{" "}
+									belum tersedia
+								</h2>
+								<Link href="/">
+									<a className="px-6 py-3 bg-pink-700 text-white transition duration-300 transform hover:-translate-y-1 inline-block relative rounded-full">
+										Kembali ke Home
+									</a>
+								</Link>
+							</div>
+						)}
 					</div>
 					<div className="lg:col-span-4 col-span-1">
 						<div className="lg:sticky relative top-8">
