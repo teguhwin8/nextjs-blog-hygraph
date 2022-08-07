@@ -14,7 +14,7 @@ export default function NotFound() {
             <div className="container mx-auto md:px-10 md:mb-8">
                 <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-12">
                     <div className="lg:col-span-8 col-span-1">
-                        <div className="bg-white md:rounded-lg mb-3 md:mb-8 p-6 md:p-8">
+                        <div className="card p-6">
                             <div className="w-1/2 mx-auto">
                                 <Lottie loop animationData={lottieJson} play className="w-full" />
                             </div>

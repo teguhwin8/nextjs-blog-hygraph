@@ -13,7 +13,7 @@ const Categories = () => {
 
     return (
         <>
-            <div className="bg-white px-5 py-6 md:rounded-lg md:mb-8">
+            <div className="card px-6 py-5">
                 <h2 className="text-lg font-medium mb-3">Kategori</h2>
                 {categories.length > 0 &&
                     categories.map((cat) => (

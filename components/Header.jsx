@@ -9,10 +9,10 @@ const Header = () => {
             <div className="w-full flex items-center justify-between py-4 md:py-8">
                 <div className="md:float-left block">
                     <Link href="/">
-                        <a className="cursor-pointer font-bold text-2xl md:text-4xl text-white">Halo Blog</a>
+                        <a className="cursor-pointer font-bold text-2xl md:text-4xl text-white md:text-black">Halo Blog</a>
                     </Link>
                 </div>
-                <div className="hidden md:flex md:gap-10 text-white">
+                <div className="hidden md:flex md:gap-10">
                     <MenuItem />
                 </div>
                 <div className="flex md:hidden">
