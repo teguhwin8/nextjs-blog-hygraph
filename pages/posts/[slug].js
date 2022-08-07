@@ -15,7 +15,7 @@ export default function PostDetails(props) {
             <div className="container mx-auto md:px-10 md:mb-8">
                 <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-12">
                     <div className="lg:col-span-8 col-span-1">
-                        <div className="bg-white md:rounded-lg px-6 md:px-8 py-4">
+                        <div className="bg-white md:rounded-lg px-6 md:px-8 py-4 md:mb-6 breadcrumb">
                             <div className="flex items-center gap-3 text-sm text-gray-500">
                                 <Link href="/">
                                     <a className="flex items-center gap-2">
