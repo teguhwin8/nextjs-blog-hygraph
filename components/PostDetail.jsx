@@ -8,9 +8,9 @@ export default function PostDetail({ post }) {
 
     return (
         <>
-            <div className="bg-white rounded-lg mb-8 p-6 md:p-8">
-                <div className="aspect-w-16 aspect-h-9 rounded-lg">
-                    <Image src={post.featuredImage.url} alt={post.title} layout="fill" className="rounded-lg" />
+            <div className="bg-white md:rounded-lg mb-3 md:mb-8 p-6 md:p-8">
+                <div className="aspect-w-16 aspect-h-9 md:rounded-lg">
+                    <Image src={post.featuredImage.url} alt={post.title} layout="fill" className="md:rounded-lg" />
                 </div>
                 <div className="my-5">
                     <h1 className="text-2xl md:text-4xl font-medium mb-8">{post.title}</h1>

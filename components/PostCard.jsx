@@ -8,9 +8,9 @@ import { FcCalendar } from "react-icons/fc";
 const PostCard = ({ post }) => {
     return (
         <>
-            <div className="bg-white rounded-lg mb-8 p-6 md:p-8">
-                <div className="aspect-w-16 aspect-h-9 rounded-lg">
-                    <Image src={post.featuredImage.url} alt={post.title} layout="fill" className="rounded-lg" />
+            <div className="bg-white md:rounded-lg mb-3 md:mb-8 p-6 md:p-8">
+                <div className="aspect-w-16 aspect-h-9 md:rounded-lg">
+                    <Image src={post.featuredImage.url} alt={post.title} layout="fill" className="md:rounded-lg" />
                 </div>
                 <div className="my-5">
                     <Link href={`/posts/${post.slug}`}>

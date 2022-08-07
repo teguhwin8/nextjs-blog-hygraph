@@ -20,7 +20,7 @@ const PostWidget = ({ categories, slug }) => {
 
     return (
         <>
-            <div className="bg-white px-5 py-6 rounded-lg mb-8">
+            <div className="bg-white px-5 py-6 md:rounded-lg mb-3 md:mb-8">
                 <h2 className="text-lg font-medium mb-3">Artikel Terbaru</h2>
                 {relatedPosts.length > 0 &&
                     relatedPosts.map((post) => (

@@ -12,10 +12,10 @@ export default function PostDetails(props) {
         <>
             <Meta post={post} />
             <motion.div className="progress-bar" style={{ scaleX: scrollYProgress }} />
-            <div className="container mx-auto px-4 md:px-10 mb-8">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div className="container mx-auto md:px-10 md:mb-8">
+                <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-12">
                     <div className="lg:col-span-8 col-span-1">
-                        <div className="bg-white rounded-lg mb-8 px-6 md:px-8 py-4">
+                        <div className="bg-white md:rounded-lg px-6 md:px-8 py-4">
                             <div className="flex items-center gap-3 text-sm text-gray-500">
                                 <Link href="/">
                                     <a className="flex items-center gap-2">
@@ -34,7 +34,7 @@ export default function PostDetails(props) {
                         <PostDetail post={post} />
                     </div>
                     <div className="lg:col-span-4 col-span-1">
-                        <div className="lg:sticky relative top-8">
+                        <div className="lg:sticky relative md:top-8">
                             <PostWidget />
                             <Categories />
                         </div>
