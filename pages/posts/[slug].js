@@ -2,13 +2,16 @@ import Link from "next/link";
 import { Categories, PostWidget, PostDetail, Meta } from "../../components";
 import { getAllSlug, getPostDetails } from "../../services";
 import { FcHome } from "react-icons/fc";
+import { motion, useScroll } from "framer-motion";
 
 export default function PostDetails(props) {
     const { post } = props.post;
+    const { scrollYProgress } = useScroll();
 
     return (
         <>
             <Meta post={post} />
+            <motion.div className="progress-bar" style={{ scaleX: scrollYProgress }} />
             <div className="container mx-auto px-4 md:px-10 mb-8">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                     <div className="lg:col-span-8 col-span-1">

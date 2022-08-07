@@ -57,3 +57,13 @@ body {
     }
 }
 
+.progress-bar {
+    @apply bg-pink-700 shadow-xl;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    transform-origin: 0%;
+    z-index: 100;
+}
