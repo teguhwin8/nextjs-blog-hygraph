@@ -9,7 +9,7 @@ export default function BurgerMenu() {
         setIsOpen(!isOpen);
     };
 
-    const classMenu = isOpen ? "top-16 right-3 left-3 opacity-1" : "top-16 right-3 left-3 opacity-0";
+    const classMenu = isOpen ? "show" : "hidden";
 
     return (
         <>
@@ -24,7 +24,7 @@ export default function BurgerMenu() {
                     </button>
                 )}
                 <div
-                    className={`absolute bg-white z-10 p-6 transition-all h-auto duration-300 rounded-lg shadow-2xl ${classMenu}`}
+                    className={`absolute bg-white p-6 h-auto top-16 right-3 left-3 transition duration-300 rounded-lg shadow-2xl ${classMenu}`}
                 >
                     <div className="flex flex-col items-center gap-8 text-gray-700">
                         <MenuItem />

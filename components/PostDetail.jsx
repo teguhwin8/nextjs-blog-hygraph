@@ -33,7 +33,7 @@ export default function PostDetail({ post }) {
                         </div>
                     </div>
                 </div>
-                <article className="my-5 pt-8">
+                <article className="my-5 pt-1 prose max-w-none">
                     <div dangerouslySetInnerHTML={{ __html: post.content.html }} />
                 </article>
             </div>
