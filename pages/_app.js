@@ -3,11 +3,11 @@ import React, { useEffect, useState } from "react";
 import { Layout } from "../components";
 
 function MyApp({ Component, pageProps }) {
-	return (
-		<Layout>
-			<Component {...pageProps} />;
-		</Layout>
-	);
+    return (
+        <Layout>
+            <Component {...pageProps} />;
+        </Layout>
+    );
 }
 
 // Only uncomment this method if you have blocking data requirements for
@@ -23,3 +23,4 @@ function MyApp({ Component, pageProps }) {
 // }
 
 export default MyApp;
+
