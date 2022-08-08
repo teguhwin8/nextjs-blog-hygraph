@@ -24,13 +24,15 @@ const PostCard = ({ post }) => {
                     </div>
                     <div className="my-5">
                         <div className="flex items-center justify-center">
-                            <Image
-                                src={post.author.photo.url}
-                                width="28"
-                                height="28"
-                                className="rounded-full"
-                                alt={post.author.name}
-                            />
+                            <div className="h-8 w-8 relative">
+                                <Image
+                                    src={post.author.photo.url}
+                                    className="rounded-full"
+                                    width={32}
+                                    height={32}
+                                    alt={post.author.name}
+                                />
+                            </div>
                             <div className="ml-2 text-gray-700 text-sm">{post.author.name}</div>
                             <div className="ml-2 text-gray-700 text-sm flex items-center gap-2">
                                 <FcCalendar className="h-6 w-6" />

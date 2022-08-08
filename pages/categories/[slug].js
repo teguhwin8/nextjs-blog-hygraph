@@ -4,14 +4,15 @@ import Lottie from "react-lottie-player";
 import { PostCard, Categories, PostWidget } from "../../components";
 import { getCategories, getCategoryDetails, getPostCategories } from "../../services";
 import lottieJson from "../../public/not_found.json";
+import { Layout } from "../../components";
 
 export default function PostCategory(props) {
     const { posts, category } = props;
 
     return (
-        <>
+        <Layout>
             <Head>
-                <title>Halo Blog</title>
+                <title>NgeHosting</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className="container mx-auto md:px-10 md:mb-8">
@@ -31,7 +32,7 @@ export default function PostCategory(props) {
                         {posts.length > 0 ? (
                             posts.map((post, index) => <PostCard key={index} post={post} />)
                         ) : (
-                            <div className="bg-white text-center md:rounded-lg mb-8 px-6 md:px-8 py-6">
+                            <div className="card text-center p-8">
                                 <div className="w-1/2 mx-auto">
                                     <Lottie loop animationData={lottieJson} play className="w-full" />
                                 </div>
@@ -54,7 +55,7 @@ export default function PostCategory(props) {
                     </div>
                 </div>
             </div>
-        </>
+        </Layout>
     );
 }
 

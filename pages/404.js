@@ -4,10 +4,11 @@ import { Categories, PostWidget } from "../components";
 import lottieJson from "../public/not_found.json";
 import Lottie from "react-lottie-player";
 import Link from "next/link";
+import { Layout } from "../components";
 
 export default function NotFound() {
     return (
-        <>
+        <Layout>
             <Head>
                 <title>Halaman Tidak Ditemukan</title>
             </Head>
@@ -38,6 +39,6 @@ export default function NotFound() {
                     </div>
                 </div>
             </div>
-        </>
+        </Layout>
     );
 }

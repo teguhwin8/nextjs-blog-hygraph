@@ -3,13 +3,14 @@ import { Categories, PostWidget, PostDetail, Meta } from "../../components";
 import { getAllSlug, getPostDetails } from "../../services";
 import { FcHome } from "react-icons/fc";
 import { motion, useScroll } from "framer-motion";
+import { Layout } from "../../components";
 
 export default function PostDetails(props) {
     const { post } = props.post;
     const { scrollYProgress } = useScroll();
 
     return (
-        <>
+        <Layout>
             <Meta post={post} />
             <motion.div className="progress-bar" style={{ scaleX: scrollYProgress }} />
             <div className="container mx-auto md:px-10 md:mb-8">
@@ -41,7 +42,7 @@ export default function PostDetails(props) {
                     </div>
                 </div>
             </div>
-        </>
+        </Layout>
     );
 }
 

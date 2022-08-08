@@ -1,13 +1,8 @@
 import "../styles/globals.scss";
-import React, { useEffect, useState } from "react";
-import { Layout } from "../components";
+import React from "react";
 
 function MyApp({ Component, pageProps }) {
-    return (
-        <Layout>
-            <Component {...pageProps} />
-        </Layout>
-    );
+    return <Component {...pageProps} />;
 }
 
 // Only uncomment this method if you have blocking data requirements for

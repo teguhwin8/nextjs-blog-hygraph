@@ -1,12 +1,13 @@
 import Head from "next/head";
 import { PostCard, Categories, PostWidget } from "../components";
 import { getPosts } from "../services";
+import { Layout } from "../components";
 
 export default function Home({ posts }) {
     return (
-        <>
+        <Layout>
             <Head>
-                <title>Halo Blog</title>
+                <title>NgeHosting</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className="container mx-auto md:px-10 md:mb-8">
@@ -24,7 +25,7 @@ export default function Home({ posts }) {
                     </div>
                 </div>
             </div>
-        </>
+        </Layout>
     );
 }
 

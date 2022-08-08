@@ -14,13 +14,13 @@ export default function Meta({ post }) {
                 datePublished={post.publishedAt}
                 dateModified={post.updatedAt}
                 authorName={post.author.name}
-                publisherName="Halo Blog"
+                publisherName="NgeHosting.id"
                 publisherLogo={baseUrl + "/logo.png"}
                 description={post.excerpt}
                 body={post.content.text}
             />
             <NextSeo
-                title={post.title}
+                title={`NgeHosting - ${post.title}`}
                 description={post.excerpt}
                 canonical={baseUrl}
                 openGraph={{
@@ -45,7 +45,7 @@ export default function Meta({ post }) {
                         { url: post.featuredImage.url },
                         { url: post.featuredImage.url },
                     ],
-                    site_name: "Halo Blog",
+                    site_name: "NgeHosting",
                 }}
                 twitter={{
                     handle: "@ms_wid",
