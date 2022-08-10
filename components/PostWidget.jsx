@@ -24,7 +24,7 @@ const PostWidget = ({ categories, slug }) => {
                 <h2 className="text-lg font-medium mb-3">Artikel Terbaru</h2>
                 {relatedPosts.length > 0 &&
                     relatedPosts.map((post) => (
-                        <div className="flex items-center justify-between gap-3 mt-6" key={post.slug}>
+                        <div className="flex items-center gap-3 mt-6" key={post.slug}>
                             <div className="flex-shrink-0 flex items-center w-[56px] h-[56px] relative">
                                 <Image
                                     src={post.featuredImage.url}
