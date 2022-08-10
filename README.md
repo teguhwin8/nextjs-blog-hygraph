@@ -1,27 +1,37 @@
-# Next.js + Tailwind CSS Example
+# Blog with NextJS and HyGraph
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+This is a Blog created with [NextJS](https://https://nextjs.org/) as Frontend and [HyGraph](https://hygraph.com) as Headless CMS.
+<br>
+<br>
+<br>
+## How to use:
+<br>
 
-## Deploy your own
+Install deppendencies
+```
+npm install
+```
+<br>
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
+Make file .env.local and add your GraphCMS Endpoint.
+```
+NEXT_PUBLIC_GRAPHCMS_ENDPOINT=your_graphcms_endpoint
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+```
+<br>
+ 
+Run Application
+```
+npm run dev
 ```
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+<br>
+<br>
+<br>
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
+## The Datamodel I used in GraphCMS: 
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+### Author 
+### Category
+### Comment
+### Post
