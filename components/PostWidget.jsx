@@ -31,7 +31,7 @@ const PostWidget = ({ categories, slug }) => {
                                     className="rounded-full"
                                     width="64"
                                     height="64"
-                                    layout="fixed"
+                                    layout="fill"
                                     alt={post.title}
                                     priority
                                 />

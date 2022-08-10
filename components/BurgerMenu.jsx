@@ -15,11 +15,11 @@ export default function BurgerMenu() {
         <>
             <div className="">
                 {!isOpen ? (
-                    <button onClick={handleOpenMenu}>
+                    <button aria-label="Menu" onClick={handleOpenMenu}>
                         <HiMenuAlt1 className="w-8 h-8 text-white" onClick={handleOpenMenu} />
                     </button>
                 ) : (
-                    <button onClick={handleOpenMenu}>
+                    <button aria-label="Close Menu" onClick={handleOpenMenu}>
                         <HiOutlineX className="w-8 h-8 text-white" />
                     </button>
                 )}
