@@ -1,5 +1,4 @@
-import { GetServerSideProps } from "next";
-import { getServerSideSitemap, ISitemapField } from "next-sitemap";
+import { getServerSideSitemap } from "next-sitemap";
 import { getAllSlug } from "../../services";
 
 export async function getServerSideProps(ctx) {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { HiMenuAlt1, HiOutlineX } from "react-icons/hi";
 import MenuItem from "./MenuItem";
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { getRecentPosts, getRelatedPosts } from "../services";
 import Image from "next/image";
@@ -16,7 +16,7 @@ const PostWidget = ({ categories, slug }) => {
                 setRelatedPosts(res.posts);
             });
         }
-    }, []);
+    }, [slug, categories]);
 
     return (
         <>

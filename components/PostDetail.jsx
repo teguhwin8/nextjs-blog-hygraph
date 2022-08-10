@@ -1,7 +1,6 @@
 import moment from "moment";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import { FcCalendar } from "react-icons/fc";
 
 export default function PostDetail({ post }) {

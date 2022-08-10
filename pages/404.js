@@ -1,4 +1,3 @@
-import React from "react";
 import Head from "next/head";
 import { Categories, PostWidget } from "../components";
 import lottieJson from "../public/not_found.json";

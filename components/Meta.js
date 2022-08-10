@@ -1,4 +1,3 @@
-import React from "react";
 import { NextSeo, NewsArticleJsonLd } from "next-seo";
 
 export default function Meta({ post }) {

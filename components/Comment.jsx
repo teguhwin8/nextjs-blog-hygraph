@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 
 export default function Comment() {
     const [error, setError] = useState(false);
@@ -40,18 +40,8 @@ export default function Comment() {
                 <div className="card-body">
                     <form>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Nama"
-                                ref={nameElement}
-                            />
-                            <input
-                                type="email"
-                                className="form-control"
-                                placeholder="Email"
-                                ref={emailElement}
-                            />
+                            <input type="text" className="form-control" placeholder="Nama" ref={nameElement} />
+                            <input type="email" className="form-control" placeholder="Email" ref={emailElement} />
                         </div>
                         <div className="mt-4">
                             <textarea
