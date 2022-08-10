@@ -29,8 +29,8 @@ const PostWidget = ({ categories, slug }) => {
                                 <Image
                                     src={post.featuredImage.url}
                                     className="rounded-full"
-                                    width={56}
-                                    height={56}
+                                    width="56"
+                                    height="56"
                                     layout="fixed"
                                     alt={post.title}
                                 />

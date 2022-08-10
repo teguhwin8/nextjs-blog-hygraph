@@ -33,8 +33,8 @@ const PostCard = ({ post }) => {
                                 <Image
                                     src={post.author.photo.url}
                                     className="rounded-full"
-                                    width={32}
-                                    height={32}
+                                    width="32"
+                                    height="32"
                                     alt={post.author.name}
                                 />
                             </div>
