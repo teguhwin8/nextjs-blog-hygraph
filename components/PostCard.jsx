@@ -10,7 +10,12 @@ const PostCard = ({ post }) => {
         <>
             <div className="card">
                 <div className="aspect-w-16 aspect-h-9 md:rounded-lg">
-                    <Image src={post.featuredImage.url} alt={post.title} layout="fill" className="md:rounded-t-lg" />
+                    <Image
+                        src={post.featuredImage.url}
+                        alt={post.title}
+                        layout="fill"
+                        className="md:rounded-t-lg aspect-w-16 aspect-h-9"
+                    />
                 </div>
                 <div className="px-6 py-3">
                     <div className="my-5">

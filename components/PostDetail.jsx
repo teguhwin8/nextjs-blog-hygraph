@@ -1,5 +1,6 @@
 import moment from "moment";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { FcCalendar } from "react-icons/fc";
 
@@ -36,6 +37,14 @@ export default function PostDetail({ post }) {
                     </div>
                     <article className="my-5 pt-1 prose max-w-none">
                         <div dangerouslySetInnerHTML={{ __html: post.content.html }} />
+                        <p>
+                            Itulah artikel tentang
+                            <Link href={`/posts/${post.slug}`}>
+                                <a className="mx-3">{post.title}.</a>
+                            </Link>
+                            Semoga bermanfaat. Jika artikel ini membantu Anda atau Anda ada pertanyaan silahkan berikan
+                            komentar di bawah ini dan share kepada teman-teman Anda. Terima kasih.
+                        </p>
                     </article>
                 </div>
             </div>
