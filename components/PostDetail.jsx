@@ -11,7 +11,12 @@ export default function PostDetail({ post }) {
         <>
             <div className="card">
                 <div className="aspect-w-16 aspect-h-9 md:rounded-lg">
-                    <Image src={post.featuredImage.url} alt={post.title} layout="fill" className="md:rounded-t-lg" />
+                    <Image
+                        src={post.featuredImage.url}
+                        alt={post.title}
+                        layout="fill"
+                        className="aspect-w-16 aspect-h-9 md:rounded-t-lg"
+                    />
                 </div>
                 <div className="p-6 md:p-8">
                     <div className="my-5">
