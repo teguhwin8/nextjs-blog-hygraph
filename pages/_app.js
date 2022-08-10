@@ -1,8 +1,8 @@
-import "../styles/globals.scss";
-import React from "react";
+import '../styles/globals.scss';
+import React from 'react';
 
-function MyApp({ Component, pageProps }) {
-    return <Component {...pageProps} />;
+function MyApp({Component, pageProps}) {
+  return <Component {...pageProps} />;
 }
 
 // Only uncomment this method if you have blocking data requirements for

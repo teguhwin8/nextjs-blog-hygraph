@@ -1,6 +1,8 @@
 {
-    "singleQuote": false,
-    "tabWidth": 4,
+    "singleQuote": true,
+    "tabWidth": 2,
     "semi": true,
-    "printWidth": 120
+    "printWidth": 80,
+    "bracketSpacing": false,
+    "prettier.endOfLine": "lf"
 }
