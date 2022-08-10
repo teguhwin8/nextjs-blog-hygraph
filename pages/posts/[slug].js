@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { Categories, PostWidget, PostDetail, Meta } from "../../components";
+import { Categories, PostWidget, PostDetail, Meta, Comment, Layout } from "../../components";
 import { getAllSlug, getPostDetails } from "../../services";
 import { FcHome } from "react-icons/fc";
 import { motion, useScroll } from "framer-motion";
-import { Layout } from "../../components";
 
 export default function PostDetails(props) {
     const { post } = props.post;
@@ -33,6 +32,7 @@ export default function PostDetails(props) {
                             </div>
                         </div>
                         <PostDetail post={post} />
+                        <Comment />
                     </div>
                     <div className="lg:col-span-4 col-span-1">
                         <div className="lg:sticky relative md:top-8">
