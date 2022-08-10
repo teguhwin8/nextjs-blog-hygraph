@@ -1,6 +1,6 @@
 # Blog with NextJS and HyGraph
 
-This is a Blog created with [NextJS](https://https://nextjs.org/) as Frontend and [HyGraph](https://hygraph.com) as Headless CMS.
+This is a Blog created with [NextJS](https://nextjs.org/) as Frontend and [HyGraph](https://hygraph.com) as Headless CMS.
 <br>
 <br>
 <br>
