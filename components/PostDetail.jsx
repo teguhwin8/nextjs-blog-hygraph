@@ -27,8 +27,8 @@ export default function PostDetail({ post }) {
                             <div className="flex items-center mr-3">
                                 <Image
                                     src={post.author.photo.url}
-                                    width="28"
-                                    height="28"
+                                    width="32"
+                                    height="32"
                                     className="rounded-full"
                                     alt={post.author.name}
                                     priority
