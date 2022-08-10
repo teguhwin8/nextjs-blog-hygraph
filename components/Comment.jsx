@@ -12,7 +12,25 @@ export default function Comment() {
 
     const handleSubmitComment = (e) => {
         e.preventDefault();
-        console.log("Submit Comment");
+        setError(false);
+
+        const { value: name } = nameElement.current;
+        const { value: email } = emailElement.current;
+        const { value: comment } = commentElement.current;
+        const { checked: storeData } = storeDataElement.current;
+
+        if (!name || !email || !comment) {
+            setError(true);
+            return;
+        }
+
+        if (storeData) {
+            window.localStorage.setItem("comment_name", name);
+            window.localStorage.setItem("comment_email", email);
+        } else {
+            window.localStorage.removeItem("comment_name");
+            window.localStorage.removeItem("comment_email");
+        }
     };
 
     return (
@@ -22,8 +40,18 @@ export default function Comment() {
                 <div className="card-body">
                     <form>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                            <input type="text" className="form-control" placeholder="Nama" ref={nameElement} />
-                            <input type="email" className="form-control" placeholder="Email" ref={emailElement} />
+                            <input
+                                type="text"
+                                className="form-control"
+                                placeholder="Nama"
+                                ref={nameElement}
+                            />
+                            <input
+                                type="email"
+                                className="form-control"
+                                placeholder="Email"
+                                ref={emailElement}
+                            />
                         </div>
                         <div className="mt-4">
                             <textarea
@@ -37,7 +65,12 @@ export default function Comment() {
                         </div>
                         <div className="mt-4 grid grid-cols-1 md:grid-cols-2">
                             <div className="flex items-center mb-6 md:mb-0 gap-3">
-                                <input type="checkbox" className="checkbox cursor-pointer" id="saveEmailAndName" />
+                                <input
+                                    type="checkbox"
+                                    className="checkbox cursor-pointer"
+                                    id="saveEmailAndName"
+                                    ref={storeDataElement}
+                                />
                                 <label htmlFor="saveEmailAndName" className="text-gray-500 text-md cursor-pointer">
                                     Simpan nama dan email di browser ini?
                                 </label>
