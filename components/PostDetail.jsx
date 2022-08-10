@@ -15,6 +15,7 @@ export default function PostDetail({ post }) {
                         alt={post.title}
                         layout="fill"
                         className="aspect-w-16 aspect-h-9 md:rounded-t-lg"
+                        priority
                     />
                 </div>
                 <div className="p-6 md:p-8">
@@ -30,6 +31,7 @@ export default function PostDetail({ post }) {
                                     height="28"
                                     className="rounded-full"
                                     alt={post.author.name}
+                                    priority
                                 />
                                 <div className="ml-2 text-gray-700 text-sm">{post.author.name}</div>
                             </div>

@@ -14,6 +14,7 @@ const PostCard = ({ post }) => {
                         alt={post.title}
                         layout="fill"
                         className="md:rounded-t-lg aspect-w-16 aspect-h-9"
+                        priority
                     />
                 </div>
                 <div className="px-6 py-3">
@@ -35,6 +36,7 @@ const PostCard = ({ post }) => {
                                     width="32"
                                     height="32"
                                     alt={post.author.name}
+                                    priority
                                 />
                             </div>
                             <div className="ml-2 text-gray-700 text-sm">{post.author.name}</div>

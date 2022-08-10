@@ -33,6 +33,7 @@ const PostWidget = ({ categories, slug }) => {
                                     height="56"
                                     layout="fixed"
                                     alt={post.title}
+                                    priority
                                 />
                             </div>
                             <Link href={`/posts/${post.slug}`}>
