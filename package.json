@@ -22,7 +22,8 @@
     "react-icons": "^4.4.0",
     "react-lottie-player": "^1.4.3",
     "react-multi-carousel": "^2.8.2",
-    "sass": "^1.54.0"
+    "sass": "^1.54.0",
+    "sharp": "^0.30.7"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.0",
