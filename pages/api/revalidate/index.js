@@ -4,7 +4,7 @@ export default async function handler(req, res) {
     }
 
     const path = req.query.path;
-    const slug = req.quety.slug;
+    const slug = req.query.slug;
 
     try {
         await res.revalidate(`/${path ? path + (slug ? "/" + slug : "") : ""}`);
