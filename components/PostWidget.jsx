@@ -34,6 +34,7 @@ const PostWidget = ({ categories, slug }) => {
                                     layout="fill"
                                     alt={post.title}
                                     priority
+                                    objectFit="cover"
                                 />
                             </div>
                             <Link href={`/posts/${post.slug}`}>
