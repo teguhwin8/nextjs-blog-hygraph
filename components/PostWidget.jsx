@@ -28,9 +28,7 @@ const PostWidget = ({ categories, slug }) => {
                             <div className="flex-shrink-0 flex items-center w-[64px] h-[64px] relative">
                                 <Image
                                     src={post.featuredImage.url}
-                                    className="rounded-full"
-                                    width="64"
-                                    height="64"
+                                    className="rounded-full w-[64px] h-[64px]"
                                     layout="fill"
                                     alt={post.title}
                                     priority
