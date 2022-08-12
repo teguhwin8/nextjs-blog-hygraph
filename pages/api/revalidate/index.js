@@ -7,7 +7,9 @@ export default async function handler(req, res) {
     const slug = req.query.slug;
 
     try {
-        await res.revalidate(`/${path ? path + (slug ? "/" + slug : "") : ""}`);
+        const paths = `/${path ? path + (slug ? "/" + slug : "") : ""}`;
+        console.log(paths);
+        await res.revalidate(paths);
         return res.json({ revalidated: true });
     } catch (err) {
         return res.status(500).send("Error revalidating");
