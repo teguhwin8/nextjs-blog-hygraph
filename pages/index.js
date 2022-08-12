@@ -7,7 +7,7 @@ export default function Home({ posts }) {
     return (
         <Layout>
             <Head>
-                <title>NgeHosting</title>
+                <title>NgeHosting.id</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className="container mx-auto md:px-10 md:mb-8">
