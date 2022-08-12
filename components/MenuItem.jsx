@@ -6,9 +6,9 @@ export default function MenuItem() {
             <Link href="/categories">
                 <a className="align-middle font-semibold cursor-pointer">Kategori</a>
             </Link>
-            <Link href="/course">
+            {/* <Link href="/course">
                 <a className="align-middle font-semibold cursor-pointer">Kursus</a>
-            </Link>
+            </Link> */}
             <Link href="/about">
                 <a className="align-middle font-semibold cursor-pointer">Tentang</a>
             </Link>
