@@ -41,7 +41,7 @@ export const getPosts = async () => {
 export const getRecentPosts = async () => {
     const query = gql`
         query MyQuery {
-            posts(orderBy: publishedAt_DESC, last: 3) {
+            posts(orderBy: publishedAt_DESC, first: 3) {
                 title
                 slug
                 featuredImage {
@@ -60,7 +60,7 @@ export const getRecentPosts = async () => {
 export const getRelatedPosts = async (categories, slug) => {
     const query = gql`
         query MyQuery {
-            posts(orderBy: publishedAt_DESC, last: 3) {
+            posts(orderBy: publishedAt_DESC, first: 3) {
                 title
                 slug
                 featuredImage {
