@@ -8,7 +8,6 @@ export default function Home({ posts }) {
         <Layout>
             <Head>
                 <title>NgeHosting.id</title>
-                <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className="container mx-auto md:px-10 md:mb-8">
                 <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-12">
