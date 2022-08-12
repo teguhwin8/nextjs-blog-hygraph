@@ -8,7 +8,6 @@ export default async function handler(req, res) {
 
     try {
         const paths = `/${path ? path + (slug ? "/" + slug : "") : ""}`;
-        console.log(paths);
         await res.revalidate(paths);
         return res.json({ revalidated: true });
     } catch (err) {
