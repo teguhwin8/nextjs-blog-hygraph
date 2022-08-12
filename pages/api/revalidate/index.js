@@ -5,15 +5,7 @@ export default async function handler(req, res) {
 
     try {
         await res.revalidate("/");
-        const slugs = await getAllSlug();
-        if (slugs && slugs.posts.length > 0) {
-            slugs.posts.map(async (slug) => {
-                await res.revalidate(`/posts/${slug.slug}`);
-            });
-            return res.json({ revalidated: true });
-        } else {
-            return res.status(500).send("Error revalidating");
-        }
+        return res.json({ revalidated: true });
     } catch (err) {
         return res.status(500).send("Error revalidating");
     }
