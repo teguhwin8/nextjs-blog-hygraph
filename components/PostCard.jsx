@@ -5,7 +5,6 @@ import Image from "next/image";
 import { FcCalendar } from "react-icons/fc";
 
 const PostCard = ({ post }) => {
-  console.log(post);
   return (
     <>
       <div className="card">
