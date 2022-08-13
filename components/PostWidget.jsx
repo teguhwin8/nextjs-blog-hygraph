@@ -9,10 +9,10 @@ const PostWidget = ({ posts }) => {
         {posts.length > 0 &&
           posts.map((post) => (
             <div className="flex items-center gap-3 mt-6" key={post.slug}>
-              <div className="flex-shrink-0 flex items-center w-[64px] h-[64px] relative">
+              <div className="flex-shrink-0 flex items-center w-[32px] h-[32px] relative">
                 <Image
                   src={post.featuredImage.url}
-                  className="rounded-full w-[64px] h-[64px]"
+                  className="rounded-full w-[32px] h-[32px]"
                   layout="fill"
                   alt={post.title}
                   priority
