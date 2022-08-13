@@ -1,9 +1,9 @@
 import Head from "next/head";
 import { PostCard, Categories, PostWidget } from "../components";
-import { getPosts } from "../services";
+import { getPosts, getCategories, getRecentPosts } from "../services";
 import { Layout } from "../components";
 
-export default function Home({ posts }) {
+export default function Home({ posts, categories, recentPosts }) {
     return (
         <Layout>
             <Head>
@@ -18,8 +18,8 @@ export default function Home({ posts }) {
                     </div>
                     <div className="lg:col-span-4 col-span-1">
                         <div className="lg:sticky relative md:top-8">
-                            <PostWidget />
-                            <Categories />
+                            <PostWidget posts={recentPosts} />
+                            <Categories categories={categories} />
                         </div>
                     </div>
                 </div>
@@ -30,8 +30,15 @@ export default function Home({ posts }) {
 
 export async function getStaticProps() {
     const posts = await getPosts();
+    const categories = await getCategories();
+    const recentPosts = await getRecentPosts();
 
     return {
-        props: { posts },
+        props: {
+            posts,
+            categories: categories.categories,
+            recentPosts: recentPosts.posts,
+        },
     };
 }
+

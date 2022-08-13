@@ -1,16 +1,6 @@
-import { useEffect, useState } from "react";
 import Link from "next/link";
-import { getCategories } from "../services";
 
-const Categories = () => {
-    const [categories, setCategories] = useState([]);
-
-    useEffect(() => {
-        getCategories().then((res) => {
-            setCategories(res.categories);
-        });
-    }, []);
-
+const Categories = ({ categories }) => {
     return (
         <>
             <div className="card px-6 py-5">
@@ -29,3 +19,4 @@ const Categories = () => {
 };
 
 export default Categories;
+
