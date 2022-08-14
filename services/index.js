@@ -57,7 +57,7 @@ export const getRecentPosts = async () => {
   return result;
 };
 
-export const getRelatedPosts = async (categories, slug) => {
+export const getRelatedPosts = async () => {
   const query = gql`
     query MyQuery {
       posts(orderBy: publishedAt_DESC, first: 3) {

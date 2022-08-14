@@ -11,7 +11,6 @@ import {
   getAllSlug,
   getCategories,
   getPostDetails,
-  getRecentPosts,
   getRelatedPosts,
 } from "../../services";
 import { FcHome } from "react-icons/fc";
@@ -66,7 +65,7 @@ export default function PostDetails(props) {
 export async function getStaticProps({ params }) {
   const slug = params.slug;
   const data = await getPostDetails(slug);
-  const relatedPosts = await getRelatedPosts(slug);
+  const relatedPosts = await getRelatedPosts();
   const categories = await getCategories();
 
   return {
