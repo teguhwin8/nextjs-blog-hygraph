@@ -66,3 +66,23 @@
   @apply p-2.5 text-sm text-gray-900 bg-gray-50 rounded-md border focus:ring-2 border-gray-300 focus:ring-blue-500 focus:border-blue-500;
 }
 
+.loader-box {
+  @apply fixed top-0 left-0 w-screen h-screen bg-[#00000050] z-50;
+  .loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #fff;
+    @apply border-b-pink-700 rounded-full inline-block fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+    animation: rotation 1s linear infinite;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

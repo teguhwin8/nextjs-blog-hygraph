@@ -6,6 +6,7 @@ import {
   Meta,
   Comment,
   Layout,
+  Loading,
 } from "../../components";
 import {
   getAllSlug,
@@ -17,9 +18,12 @@ import { FcHome } from "react-icons/fc";
 import { motion, useScroll } from "framer-motion";
 
 export default function PostDetails(props) {
+  const { scrollYProgress } = useScroll();
+  if (!props.post) {
+    return <Loading />;
+  }
   const { post } = props.post;
   const { categories, relatedPosts } = props;
-  const { scrollYProgress } = useScroll();
 
   return (
     <Layout>
@@ -84,7 +88,7 @@ export async function getStaticPaths() {
 
   return {
     paths: slugs,
-    fallback: false,
+    fallback: true,
   };
 }
 

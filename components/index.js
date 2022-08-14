@@ -8,3 +8,4 @@ export { default as BurgerMenu } from "./BurgerMenu";
 export { default as MenuItem } from "./MenuItem";
 export { default as Meta } from "./Meta";
 export { default as Comment } from "./Comment";
+export { default as Loading } from "./Loading";
