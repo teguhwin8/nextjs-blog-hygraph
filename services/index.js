@@ -197,3 +197,69 @@ export const getCategoryDetails = async (slug) => {
   return result;
 };
 
+export const getFeaturedPosts = async () => {
+  const query = gql`
+    query MyQuery {
+      posts(where: { featuredPost: true }, orderBy: publishedAt_DESC) {
+        id
+        author {
+          name
+          bio
+          id
+          photo {
+            url
+          }
+        }
+        slug
+        title
+        excerpt
+        featuredImage {
+          url
+        }
+        categories {
+          name
+          slug
+        }
+        publishedAt
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query);
+
+  return result;
+};
+
+export const getNonFeaturedPosts = async () => {
+  const query = gql`
+    query MyQuery {
+      posts(where: { featuredPost: false }, orderBy: publishedAt_DESC) {
+        id
+        author {
+          name
+          bio
+          id
+          photo {
+            url
+          }
+        }
+        slug
+        title
+        excerpt
+        featuredImage {
+          url
+        }
+        categories {
+          name
+          slug
+        }
+        publishedAt
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query);
+
+  return result;
+};
+

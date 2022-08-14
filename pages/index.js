@@ -1,9 +1,19 @@
 import Head from "next/head";
 import { PostCard, Categories, PostWidget } from "../components";
-import { getPosts, getCategories, getRecentPosts } from "../services";
+import {
+  getCategories,
+  getRecentPosts,
+  getFeaturedPosts,
+  getNonFeaturedPosts,
+} from "../services";
 import { Layout } from "../components";
 
-export default function Home({ posts, categories, recentPosts }) {
+export default function Home({
+  posts,
+  categories,
+  recentPosts,
+  featuredPosts,
+}) {
   return (
     <Layout>
       <Head>
@@ -13,8 +23,12 @@ export default function Home({ posts, categories, recentPosts }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-6">
           <div className="lg:col-span-9 col-span-1">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {posts.map((post, index) => (
-                <PostCard key={index} post={post.node} />
+              {featuredPosts &&
+                featuredPosts.map((post, index) => (
+                  <PostCard key={index} post={post} />
+                ))}
+              {posts && posts.map((post, index) => (
+                <PostCard key={index} post={post} />
               ))}
             </div>
           </div>
@@ -31,15 +45,17 @@ export default function Home({ posts, categories, recentPosts }) {
 }
 
 export async function getStaticProps() {
-  const posts = await getPosts();
+  const posts = await getNonFeaturedPosts();
   const categories = await getCategories();
   const recentPosts = await getRecentPosts();
+  const featuredPosts = await getFeaturedPosts();
 
   return {
     props: {
-      posts,
+      posts: posts.posts,
       categories: categories.categories,
       recentPosts: recentPosts.posts,
+      featuredPosts: featuredPosts.posts,
     },
   };
 }
