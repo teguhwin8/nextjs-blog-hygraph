@@ -125,7 +125,7 @@ export const getPostDetails = async (slug) => {
         }
         content {
           html
-          text
+          json
         }
         featuredImage {
           url

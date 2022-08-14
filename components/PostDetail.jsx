@@ -20,7 +20,7 @@ export default function PostDetail({ post }) {
         </div>
         <div className="p-6 md:p-8">
           <div className="my-5">
-            <h1 className="text-3xl md:text-6xl font-medium mb-8 text-black">
+            <h1 className="text-3xl md:text-6xl font-medium mb-8 text-black font-serif">
               {post.title}
             </h1>
           </div>
