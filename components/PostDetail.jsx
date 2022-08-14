@@ -20,7 +20,7 @@ export default function PostDetail({ post }) {
         </div>
         <div className="p-6 md:p-8">
           <div className="my-5">
-            <h1 className="text-2xl md:text-4xl font-medium mb-8">
+            <h1 className="text-3xl md:text-6xl font-medium mb-8 text-black">
               {post.title}
             </h1>
           </div>
@@ -29,17 +29,17 @@ export default function PostDetail({ post }) {
               <div className="flex items-center mr-3">
                 <Image
                   src={post.author.photo.url}
-                  width="32"
-                  height="32"
+                  width="24"
+                  height="24"
                   className="rounded-full"
                   alt={post.author.name}
                   priority
                 />
-                <div className="ml-2 text-gray-700 text-sm">
+                <div className="ml-2 text-gray-500 text-sm">
                   {post.author.name}
                 </div>
               </div>
-              <div className="ml-1 text-gray-700 text-sm flex items-center gap-2">
+              <div className="ml-1 text-gray-500 text-sm flex items-center gap-2">
                 <FcCalendar className="h-6 w-6" />
                 {moment(post.publishedAt).format("DD MMMM YYYY")}
               </div>
