@@ -95,7 +95,7 @@ export const getCategories = async () => {
 export const getAllSlug = async () => {
   const query = gql`
     query MyQuery {
-      posts {
+      posts(first: 1000) {
         slug
       }
     }
@@ -200,7 +200,7 @@ export const getCategoryDetails = async (slug) => {
 export const getFeaturedPosts = async () => {
   const query = gql`
     query MyQuery {
-      posts(where: { featuredPost: true }, orderBy: publishedAt_DESC) {
+      posts(where: { featuredPost: true }, orderBy: publishedAt_DESC, first: 3) {
         id
         author {
           name
@@ -233,7 +233,7 @@ export const getFeaturedPosts = async () => {
 export const getNonFeaturedPosts = async () => {
   const query = gql`
     query MyQuery {
-      posts(where: { featuredPost: false }, orderBy: publishedAt_DESC) {
+      posts(where: { featuredPost: false }, orderBy: publishedAt_DESC, first: 100) {
         id
         author {
           name

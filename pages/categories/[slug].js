@@ -23,7 +23,7 @@ export default function PostCategory(props) {
       </Head>
       <div className="container mx-auto md:px-10 md:mb-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-12">
-          <div className="lg:col-span-9 col-span-1">
+          <div className="lg:col-span-8 col-span-1">
             <div className="breadcrumb">
               <div className="flex items-center gap-3 text-sm text-gray-500">
                 <Link href="/">
@@ -36,7 +36,7 @@ export default function PostCategory(props) {
               </div>
             </div>
             {posts.length > 0 ? (
-              <div className="lg:col-span-9 col-span-1">
+              <div className="lg:col-span-8 col-span-1">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {posts.map((post, index) => (
                     <PostCard key={index} post={post} />
@@ -64,7 +64,7 @@ export default function PostCategory(props) {
               </div>
             )}
           </div>
-          <div className="lg:col-span-3 col-span-1">
+          <div className="lg:col-span-4 col-span-1">
             <div className="lg:sticky relative md:top-8">
               <PostWidget posts={recentPosts} />
               <Categories categories={categories} />
