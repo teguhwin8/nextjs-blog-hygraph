@@ -10,6 +10,7 @@ export default function Document() {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
         />
+        <link rel="apple-touch-icon" href="/icon-192x192.png" />
       </Head>
       <body>
         <Main />
