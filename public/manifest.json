@@ -1,7 +1,7 @@
 {
   "theme_color": "#be185d",
   "background_color": "#be185d",
-  "display": "browser",
+  "display": "standalone",
   "scope": "/",
   "start_url": "/",
   "name": "NgeHosting.id",
