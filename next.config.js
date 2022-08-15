@@ -1,7 +1,16 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
-	reactStrictMode: true,
-	images: {
-		domains: ["media.graphassets.com"],
-	},
-};
+const withPWA = require("next-pwa");
+
+module.exports = withPWA({
+  reactStrictMode: true,
+  images: {
+    domains: ["media.graphassets.com"],
+  },
+  pwa: {
+    dest: "public",
+		disable: process.env.NODE_ENV === 'development',
+    register: true,
+		skipWaiting: true
+  },
+});
+
