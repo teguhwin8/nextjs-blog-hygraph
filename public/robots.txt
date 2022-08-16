@@ -1,4 +1,4 @@
-Sitemap: https://ngehosting.id/sitemap-posts.xml
+Sitemap: https://ngehosting.id/sitemap.xml
 
 User-agent: *
 Allow: /*
