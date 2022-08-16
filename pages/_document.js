@@ -28,6 +28,12 @@ export default function Document() {
             });
           `}
         </Script>
+        <Script
+          id="adsense"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3696600059241984"
+          crossorigin="anonymous"
+        ></Script>
       </Head>
       <body>
         <Main />
