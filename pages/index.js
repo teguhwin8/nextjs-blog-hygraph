@@ -18,6 +18,10 @@ export default function Home({
     <Layout>
       <Head>
         <title>NgeHosting.id</title>
+        <meta
+          name="description"
+          content="Ngehosting adalah website teknologi berbahasa Indonesia yang menyajikan informasi pemrograman, software, tips dan trik, dan informasi teknologi lainnya."
+        />
       </Head>
       <div className="container mx-auto md:px-10 md:mb-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-6">
@@ -27,9 +31,10 @@ export default function Home({
                 featuredPosts.map((post, index) => (
                   <PostCard key={index} post={post} />
                 ))}
-              {posts && posts.map((post, index) => (
-                <PostCard key={index} post={post} />
-              ))}
+              {posts &&
+                posts.map((post, index) => (
+                  <PostCard key={index} post={post} />
+                ))}
             </div>
           </div>
           <div className="lg:col-span-4 col-span-1">
