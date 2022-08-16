@@ -9,7 +9,8 @@ module.exports = withPWA({
     dest: "public",
     register: true,
     scope: '/',
-    skipWaiting: true
+    skipWaiting: true,
+    disable: process.env.NODE_ENV === 'development'
   },
 });
 

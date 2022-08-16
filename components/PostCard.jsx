@@ -6,7 +6,10 @@ import { FcCalendar } from "react-icons/fc";
 
 const PostCard = ({ post }) => {
   return (
-    <div className="card">
+    <div className="card relative">
+      <div className="absolute top-1 right-1 bg-pink-700 text-white rounded-full px-3 py-1 text-xs z-10">
+        {post.categories[0].name}
+      </div>
       <Link href={`/posts/${post.slug}`}>
         <a className="relative">
           <div className="aspect-w-16 aspect-h-9 md:rounded-t-lg overflow-hidden">
@@ -17,9 +20,6 @@ const PostCard = ({ post }) => {
               className="md:rounded-t-lg aspect-w-16 aspect-h-9 transition duration-300 hover:scale-110"
               priority
             />
-          </div>
-          <div className="absolute top-1 right-1 bg-pink-700 text-white rounded-full px-3 py-1 text-xs">
-            {post.categories[0].name}
           </div>
         </a>
       </Link>

@@ -9,3 +9,5 @@ export { default as MenuItem } from "./MenuItem";
 export { default as Meta } from "./Meta";
 export { default as Comment } from "./Comment";
 export { default as Loading } from "./Loading";
+export { default as FeaturedPost } from "./FeaturedPost";
+export { default as FeaturedPostCard } from "./FeaturedPostCard";
