@@ -22,6 +22,24 @@ export default function Home({
           name="description"
           content="Ngehosting adalah website teknologi berbahasa Indonesia yang menyajikan informasi pemrograman, software, tips dan trik, dan informasi teknologi lainnya."
         />
+        <meta property="og:url" content="https://ngehosting.id" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="NgeHosting.id" />
+        <meta
+          property="og:description"
+          content="Ngehosting adalah website teknologi berbahasa Indonesia yang menyajikan informasi pemrograman, software, tips dan trik, dan informasi teknologi lainnya."
+        />
+        <meta property="og:image" content={`https://ngehosting.id/ngehosting-cover.jpg`} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="ngehosting.id" />
+        <meta property="twitter:url" content="https://ngehosting.id" />
+        <meta name="twitter:title" content="NgeHosting.id" />
+        <meta
+          name="twitter:description"
+          content="Ngehosting adalah website teknologi berbahasa Indonesia yang menyajikan informasi pemrograman, software, tips dan trik, dan informasi teknologi lainnya."
+        />
+        <meta name="twitter:image" content={`https://ngehosting.id/ngehosting-cover.jpg`} />
       </Head>
       <div className="container mx-auto md:px-10 md:mb-8">
         {featuredPosts && (
