@@ -30,9 +30,10 @@ export default function Document() {
         </Script>
         <Script
           id="adsense"
-          async
+          async="true"
+          strategy="beforeInteractive"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3696600059241984"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         ></Script>
       </Head>
       <body>
