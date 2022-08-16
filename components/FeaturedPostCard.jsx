@@ -19,7 +19,9 @@ export default function FeaturedPostCard({ post }) {
         </a>
       </Link>
       <div className="absolute bottom-6 left-6 text-white text-lg md:text-xl font-medium line-clamp-2 z-10">
-        {post.title}
+        <Link href={`/posts/${post.slug}`}>
+          <a className="relative">{post.title}</a>
+        </Link>
       </div>
       <div className="absolute bottom-0 left-0 top-0 right-0 bg-black opacity-50"></div>
       <div className="absolute top-1 right-1 bg-pink-700 text-white rounded-full px-3 py-1 text-xs z-10">
