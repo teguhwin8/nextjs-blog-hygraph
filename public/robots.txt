@@ -1,5 +1,3 @@
-Sitemap: https://ngehosting.id/sitemap.xml
-
 User-agent: *
 Allow: /*
 Allow: /posts/*
@@ -7,3 +5,5 @@ Allow: /posts/*
 Disallow: /api/*
 Disallow: /_next/*
 Disallow: /js
+
+Sitemap: https://ngehosting.id/sitemap.xml
