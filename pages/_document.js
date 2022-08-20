@@ -8,6 +8,10 @@ export default function Document() {
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#ffffff" />
         <meta
+          name="google-site-verification"
+          content="ZvPZfKEFaSxGE7BXQP4oXAmlhomhVqzn2m3lI9ax3v4"
+        />
+        <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
         />
